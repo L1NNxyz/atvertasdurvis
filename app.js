@@ -55,11 +55,11 @@ const DEFS = {
 // ═══════════════════════════════════════════
 const SHAPE_ICONS = {
   circle:   `<div class="mini-circle"></div>`,
-  ring:     `<div style="width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.5)"></div>`,
+  ring:     `<div style="width:16px;height:16px;border-radius:50%;border:2.5px solid rgba(94,92,230,0.7)"></div>`,
   square:   `<div class="mini-square"></div>`,
-  star:     `<svg width="16" height="16" viewBox="0 0 16 16" fill="rgba(255,255,255,0.45)"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,11.5 3.5,15 5,9.5 1,6 6,6"/></svg>`,
-  hexagon:  `<svg width="16" height="16" viewBox="0 0 16 16" fill="rgba(255,255,255,0.45)"><polygon points="8,1 14,4.5 14,11.5 8,15 2,11.5 2,4.5"/></svg>`,
-  diamond:  `<div style="width:12px;height:12px;background:rgba(255,255,255,0.35);transform:rotate(45deg);border-radius:2px"></div>`,
+  star:     `<svg width="16" height="16" viewBox="0 0 16 16" fill="rgba(94,92,230,0.75)"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,11.5 3.5,15 5,9.5 1,6 6,6"/></svg>`,
+  hexagon:  `<svg width="16" height="16" viewBox="0 0 16 16" fill="rgba(94,92,230,0.75)"><polygon points="8,1 14,4.5 14,11.5 8,15 2,11.5 2,4.5"/></svg>`,
+  diamond:  `<div style="width:12px;height:12px;background:rgba(94,92,230,0.65);transform:rotate(45deg);border-radius:2px"></div>`,
   triangle: `<div class="mini-triangle"></div>`,
 };
 const EFFECT_ICONS  = { neon:'◈', shadow:'◫', glass:'◻', outline:'○' };
@@ -100,12 +100,12 @@ function iconFor(def) {
       if (def.tag === 'gradient')
         return `<span style="font-size:14px;font-weight:800;background:linear-gradient(90deg,#ff5733,#8338ec);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1">T</span>`;
       if (def.tag === 'button')
-        return `<span style="font-size:9px;padding:2px 5px;border-radius:3px;background:rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-weight:600;line-height:1.4;white-space:nowrap">BTN</span>`;
-      return `<span style="font-size:${{h1:'16px',p:'12px',small:'9px'}[def.tag]};font-weight:${{h1:'800',p:'400',small:'400'}[def.tag]};color:rgba(255,255,255,0.5);line-height:1">T</span>`;
+        return `<span style="font-size:9px;padding:2px 5px;border-radius:3px;background:rgba(88,86,214,0.15);color:rgba(88,86,214,0.9);font-weight:600;line-height:1.4;white-space:nowrap">BTN</span>`;
+      return `<span style="font-size:${{h1:'16px',p:'12px',small:'9px'}[def.tag]};font-weight:${{h1:'800',p:'400',small:'400'}[def.tag]};color:rgba(0,0,0,0.55);line-height:1">T</span>`;
     case 'shape':  return SHAPE_ICONS[def.shape] || '';
-    case 'effect': return `<span style="font-size:16px;line-height:1;color:rgba(255,255,255,0.45)">${EFFECT_ICONS[def.effect]||'◈'}</span>`;
-    case 'anim':   return `<span style="font-size:16px;line-height:1;color:rgba(255,255,255,0.4)">${ANIM_ICONS[def.anim]||'◌'}</span>`;
-    case 'layout': return `<span style="font-size:15px;line-height:1;color:rgba(255,255,255,0.4)">${LAYOUT_ICONS[def.layout]}</span>`;
+    case 'effect': return `<span style="font-size:16px;line-height:1;color:rgba(0,0,0,0.55)">${EFFECT_ICONS[def.effect]||'◈'}</span>`;
+    case 'anim':   return `<span style="font-size:16px;line-height:1;color:rgba(255,59,48,0.85)">${ANIM_ICONS[def.anim]||'◌'}</span>`;
+    case 'layout': return `<span style="font-size:15px;line-height:1;color:rgba(52,199,89,0.9)">${LAYOUT_ICONS[def.layout]}</span>`;
     case 'bg':
       return def.subtype === 'gradient'
         ? `<div class="mini-grad" style="background:linear-gradient(135deg,${def.vals[0]},${def.vals[1]})"></div>`
