@@ -145,7 +145,7 @@ function makePaletteBlock(def) {
   el.dataset.tilt = '8';
 
   const nameHTML = def.type === 'color'
-    ? `<span class="mono" style="color:${def.hex}">${def.hex}</span>`
+    ? `<span class="mono" style="color:${def.hex === '#FFFFFF' ? '#8E8E93' : def.hex}">${def.hex}</span>`
     : def.label;
 
   el.innerHTML = `
@@ -273,7 +273,7 @@ function escHtml(s) {
 
 function labelFor(b) {
   switch (b.type) {
-    case 'color':  return `<span class="mono" style="color:${b.hex}">${b.hex}</span>`;
+    case 'color':  return `<span class="mono" style="color:${b.hex === '#FFFFFF' ? '#8E8E93' : b.hex}">${b.hex}</span>`;
     case 'effect': return EFFECT_LABELS[b.effect] || b.label;
     case 'text':
       if (b.isCustom)
