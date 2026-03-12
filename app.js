@@ -45,8 +45,8 @@ const DEFS = {
     { id:'l2', type:'layout', layout:'left',   label:'Pa kreisi', desc:'align: left'   },
   ],
   logo: [
-    { id:'lg1', type:'logo', size:'m', label:'Logo', desc:'vidējs' },
-    { id:'lg2', type:'logo', size:'l', label:'Logo', desc:'liels'  },
+    { id:'lg1', type:'logo', size:'m', label:'Logo vidējs', desc:'vidējs' },
+    { id:'lg2', type:'logo', size:'l', label:'Logo liels',  desc:'liels'  },
   ],
 };
 
