@@ -640,6 +640,7 @@ function setupModal() {
     });
   }
   document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('tlClose').addEventListener('click', closeModal);
   overlay.addEventListener('click', e => { if(e.target===overlay) closeModal(); });
   document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
 }
