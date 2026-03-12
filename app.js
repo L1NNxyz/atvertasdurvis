@@ -654,11 +654,11 @@ function initAurora() {
   const cvs = document.getElementById('auroraCanvas');
   const ctx  = cvs.getContext('2d', { alpha: true });
   const BLOBS = [
-    { rgb:[10,132,255],  opacity:0.22, r:340, vx:0.28,  vy:0.18  },
-    { rgb:[94,92,230],   opacity:0.18, r:300, vx:-0.22, vy:0.24  },
-    { rgb:[48,209,88],   opacity:0.10, r:260, vx:0.18,  vy:-0.22 },
-    { rgb:[255,55,95],   opacity:0.12, r:240, vx:-0.26, vy:-0.16 },
-    { rgb:[100,210,255], opacity:0.10, r:220, vx:0.20,  vy:0.28  },
+    { rgb:[10,132,255],  opacity:0.08, r:380, vx:0.28,  vy:0.18  },
+    { rgb:[94,92,230],   opacity:0.06, r:340, vx:-0.22, vy:0.24  },
+    { rgb:[48,209,88],   opacity:0.04, r:300, vx:0.18,  vy:-0.22 },
+    { rgb:[255,55,95],   opacity:0.05, r:280, vx:-0.26, vy:-0.16 },
+    { rgb:[100,210,255], opacity:0.04, r:260, vx:0.20,  vy:0.28  },
   ];
   function resize() {
     cvs.width = window.innerWidth; cvs.height = window.innerHeight;
