@@ -23,10 +23,10 @@ const DEFS = {
     { id:'c6', type:'color', hex:'#FFFFFF' },
   ],
   text: [
-    { id:'t1', type:'text', tag:'h1',     content:'Sveika, pasaule!',    label:'Virsraksts',      desc:'Sveika, pasaule!' },
+    { id:'t1', type:'text', tag:'h1',     content:'Hello, world!',        label:'Virsraksts',      desc:'Hello, world!' },
     { id:'t2', type:'text', tag:'h1',     content:'',                     label:'Savs virsraksts', desc:'Raksti pats...', isCustom:true },
-    { id:'t3', type:'text', tag:'p',      content:'Kods ir māksla.',      label:'Teksts',          desc:'Kods ir māksla.' },
-    { id:'t4', type:'text', tag:'button', content:'Nospied mani!',        label:'Poga',            desc:'Nospied mani!' },
+    { id:'t3', type:'text', tag:'p',      content:'Code is art.',         label:'Teksts',          desc:'Code is art.' },
+    { id:'t4', type:'text', tag:'button', content:'Click me!',            label:'Poga',            desc:'Click me!' },
   ],
   shape: [
     { id:'s1', type:'shape', shape:'circle',   size:'m', label:'Aplis'     },
