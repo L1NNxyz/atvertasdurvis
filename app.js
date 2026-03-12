@@ -100,7 +100,13 @@ function iconFor(def) {
       if (def.tag === 'gradient')
         return `<span style="font-size:14px;font-weight:800;background:linear-gradient(90deg,#ff5733,#8338ec);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1">T</span>`;
       if (def.tag === 'button')
-        return `<span style="font-size:9px;padding:2px 5px;border-radius:3px;background:rgba(88,86,214,0.15);color:rgba(88,86,214,0.9);font-weight:600;line-height:1.4;white-space:nowrap">BTN</span>`;
+        return `<span style="font-size:9px;padding:2px 5px;border-radius:3px;background:rgba(88,86,214,0.15);color:rgba(88,86,214,0.9);font-weight:700;line-height:1.4;white-space:nowrap">BTN</span>`;
+      if (def.isCustom)
+        return `<span style="font-size:12px;font-weight:700;color:rgba(88,86,214,0.85);line-height:1">H✎</span>`;
+      if (def.tag === 'h1')
+        return `<span style="font-size:14px;font-weight:900;color:rgba(88,86,214,0.85);line-height:1">H1</span>`;
+      if (def.tag === 'p')
+        return `<span style="font-size:16px;font-weight:400;color:rgba(88,86,214,0.75);line-height:1">¶</span>`;
       return `<span style="font-size:${{h1:'16px',p:'12px',small:'9px'}[def.tag]};font-weight:${{h1:'800',p:'400',small:'400'}[def.tag]};color:rgba(0,0,0,0.55);line-height:1">T</span>`;
     case 'shape':  return SHAPE_ICONS[def.shape] || '';
     case 'effect': return `<span style="font-size:16px;line-height:1;color:rgba(0,0,0,0.55)">${EFFECT_ICONS[def.effect]||'◈'}</span>`;
